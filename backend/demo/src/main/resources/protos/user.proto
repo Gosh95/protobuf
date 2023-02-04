@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package demo;
+
+option java_multiple_files = true;
+option java_package = "com.example.demo.global.protos.user";
+option java_outer_classname = "UserProtos";
+
+enum GenderType {
+  MALE = 0;
+  FEMALE = 1;
+}
+
+message UserCreateReq {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+  GenderType gender = 4;
+}
+
+message UserCreateRes {
+  int64 id = 1;
+}
